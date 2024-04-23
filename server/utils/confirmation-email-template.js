@@ -6,7 +6,7 @@ const getTemplateHTML = (url) => {
 
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Email Confirmation</title>
+    <title>AAH poker Email Confirmation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
     /**
@@ -108,7 +108,7 @@ const getTemplateHTML = (url) => {
 
     <!-- start preheader -->
     <div class="preheader" style="display: none; max-width: 0; max-height: 0; overflow: hidden; font-size: 1px; line-height: 1px; color: #fff; opacity: 0;">
-        Confirm Email for Raghu's Multiplayer Poker Game.
+        Confirm Email for AAH Multiplayer Poker Game.
     </div>
     <!-- end preheader -->
 
@@ -151,7 +151,7 @@ const getTemplateHTML = (url) => {
             <!-- start copy -->
             <tr>
                 <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-                <p style="margin: 0;">Tap the button below to confirm your email address. If you didn't create an account for <a href="https://sendgrid.com">Raghu's Multiplayer Poker Game</a>, you can safely delete this email.</p>
+                <p style="margin: 0;">Tap the button below to confirm your email address. If you didn't create an account for <a href="https://poker.c4ex.net">AAH Poker Game</a>, you can safely delete this email.</p>
                 </td>
             </tr>
             <!-- end copy -->
