@@ -1,0 +1,12 @@
+cd /home/dev/www/game/poker.c4ex.net
+
+
+err 1 : error:0308010C:digital envelope routines::unsupported
+
+cd /home/dev/www/game/poker.c4ex.net/client
+npm uninstall react-scripts
+npm install react-scripts
+
+
+/home/dev/www/game/poker.c4ex.net/server
+yarn start

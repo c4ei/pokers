@@ -11,7 +11,7 @@ const sendMail = (email, uniqueString) => {
     })
 
     var mailOptions
-    let sender = "Raghunath Prabhakar"
+    let sender = "AAH poker"
     mailOptions = {
         from: sender,
         to: email,

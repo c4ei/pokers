@@ -1,5 +1,6 @@
 require('dotenv').config()
 const express = require('express')
+const path = require('path');
 const cookieParser = require('cookie-parser')
 const socketio = require('socket.io')
 const http = require('http')
@@ -7,6 +8,7 @@ const { addUser, removeUser, getUser, getUsersInRoom } = require('./users')
 const authRoutes = require('./routes/auth')
 const bcrypt = require('bcrypt')
 const mongoose = require('mongoose')
+var cors = require('cors');
 
 mongoose.connect(process.env.MONGO_ATLAS_URI)
 const db = mongoose.connection
@@ -22,6 +24,7 @@ const PORT = process.env.PORT
 const app = express()
 const server = http.createServer(app)
 const io = socketio(server)
+app.use(cors());
 
 app.use(function (req, res, next) {
 	res.header('Access-Control-Allow-Credentials', true)
@@ -121,6 +124,18 @@ io.on('connection', (socket) => {
 			})
 	})
 })
+
+
+app.use(express.static( path.join(__dirname, '../client/build') ))
+
+app.get('/', function(req,resp){
+  resp.sendFile( path.join(__dirname, '../client/build/index.html') )
+}) 
+//이 코드는 항상 가장 하단에 놓아야 잘됩니다. 
+app.get('*', function (req, resp) {
+  resp.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
 
 server.listen(PORT, () => {
 	console.log(`Server running on port ${PORT}`)
